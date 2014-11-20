@@ -4,4 +4,17 @@
 
 <body>
   {{> loginButtons}}
+  {{> screen}}
 </body>
+
+<template name="screen">
+  {{#if currentUser}}
+    <p>User is logged in.</p>
+  {{else}}
+    <p>User is logged out.</p>
+  {{/if}}
+  {{#each posts}}
+    {{story}}
+  {{/each}}
+  {{account}}
+</template>
